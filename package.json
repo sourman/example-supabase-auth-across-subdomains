@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Hey there, there are a few steps to make use of this repo\n\n1. you will need to modify the /etc/hosts file to add the following:\n\n```\n# root domain name does not matter, you can set it to anything you want\n# but has to be the same for both subdomains\n127.0.0.1 www.auth-learn.com\n127.0.0.1 app.auth-learn.com\n```\n\n2. You will also need to install pip packages `flask` and `requests` to run the proxy.\n3. Run the proxy with `sudo nohup python3 proxy.py &` <-- must be run by root user and must be python3\n4. Run the first subdomain do `npm run www` make sure it was able to take port 4000.\n5. And for the second do `npm run app` make sure it was able to grab port 4001\nNOTE: you will need to open to shells one for each subdomain'",
+    "www": "SUBDOMAIN=www next dev --port 4000",
+    "app": "SUBDOMAIN=app next dev --port 4001",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest",
+    "autoprefixer": "10.4.20",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "latest",
+    "next-themes": "^0.4.3",
+    "prettier": "^3.3.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "19.0.2",
+    "postcss": "8.4.49",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.7.2"
+  }
+}
